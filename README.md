@@ -1,2 +1,2 @@
 # books-libraryi-yandex-cloud
-Web library service, creating with Yandex Cloud
+Web library service, created by using Yandex Cloud
