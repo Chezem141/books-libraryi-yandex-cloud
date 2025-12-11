@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электронная библиотека</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Электронная библиотека</h1>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Поиск по названию или автору...">
+            <button onclick="searchBooks()">Найти</button>
+            <button onclick="clearSearch()">Сбросить</button>
+        </div>
+
+        <div class="upload-section">
+            <h2>Добавить новую книгу</h2>
+            <div class="uploadForm">
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <input type="text" id="title" placeholder="Название книги" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="author" placeholder="Автор" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="description" placeholder="Описание книги"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <select id="format" required>
+                            <option value="">Выберите формат</option>
+                            <option value="pdf">PDF</option>
+                            <option value="epub">EPUB</option>
+                            <option value="djvu">DJVU</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" id="bookFile" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Добавить книгу</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">Загрузка книг...</div>
+        <div id="booksGrid" class="books-grid"></div>
+    </div>
+
+    <script src="actions.js"></script>
+</body>
+</html>
